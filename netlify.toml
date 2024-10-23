@@ -1,0 +1,7 @@
+# Forward requests to /legacy if the browser sends a cookie 
+# named `is_legacy` or `my_other_cookie`
+[[redirects]]
+from = "/*"
+to = "https://blogbackend-z08y.onrender.com:splat"
+status = 200
+force = true
