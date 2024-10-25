@@ -37,7 +37,9 @@ div.post-page a.edit{
    gap: 5px;
 }
    
- 
+ button{
+  cursor: pointer;
+ }
    
 
 a svg {
