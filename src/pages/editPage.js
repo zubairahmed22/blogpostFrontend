@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Navigate } from "react-router-dom"
 import Editor from "../Editor"
 import { useParams } from "react-router-dom"
+import { baseUrl } from "../url"
 const EditPage = () =>{
   const {id} = useParams()
 
@@ -15,7 +16,7 @@ const EditPage = () =>{
     const [redirect, setRedirect] = useState(false)
 
      useEffect(() => {
-      fetch(`https://blogbackend-z08y.onrender.com/api/post/${id}`).then(response => {
+      fetch(`${baseUrl}/api/post/${id}`).then(response => {
         response.json().then(postInfo => {
           setTitle(postInfo.title)
           setContent(postInfo.content)
@@ -36,7 +37,7 @@ const EditPage = () =>{
         data.set('file',files?.[0])
       }
     
-   const response =  await  fetch(`https://blogbackend-z08y.onrender.com/api/post`,{
+   const response =  await  fetch(`${baseUrl}/api/post`,{
         method: "PUT",
         body: data,
         credentials: 'include'

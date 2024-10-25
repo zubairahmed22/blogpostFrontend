@@ -5,7 +5,7 @@ import { baseUrl } from '../url'
 const IndexPage = () => {
 const [posts, setPosts] = useState([])
   useEffect(() => {
-    fetch('baseUrl/api/post').then(response => {
+    fetch(`${baseUrl}/api/post`).then(response => {
      response.json().then(posts =>{
        
        setPosts(posts)

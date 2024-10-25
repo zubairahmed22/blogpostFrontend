@@ -1,6 +1,7 @@
 import React from 'react'
 import {formatISO9075} from 'date-fns'
 import { Link } from 'react-router-dom';
+import { baseUrl } from './url';
 
 const Post = ({title, _id,summery, cover, content, author,createdAt}) => {
   return (
@@ -8,7 +9,7 @@ const Post = ({title, _id,summery, cover, content, author,createdAt}) => {
     <div className="entries">
     <div className="image">
       <Link to={`/post/${_id}`}>
-    <img src={'baseUrl/'+cover}
+    <img src={`${baseUrl}/`+cover}
 
     alt="blog image"/>
         </Link>

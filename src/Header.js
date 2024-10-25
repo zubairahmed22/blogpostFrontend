@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { UserContext } from './Usercontext'
-
+import {baseUrl} from "./url"
 export const Header = () => {
  const {setUserInfo, userInfo} = useContext(UserContext)
   useEffect(() => {
-  fetch('https://blogbackend-z08y.onrender.com/profile',{
+  fetch('baseUrl/profile',{
     credentials: 'include'
   }).then(response =>{
     response.json().then(userInfo =>{
@@ -20,7 +20,7 @@ export const Header = () => {
   const username = userInfo?.username
 
 function logout(){
-  fetch('https://blogbackend-z08y.onrender.com/api/logout',{
+  fetch(`${baseUrl}/api/logout`,{
     credentials: 'include',
     method: 'POST'
   })

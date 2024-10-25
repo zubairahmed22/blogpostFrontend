@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom";
 import {formatISO9075} from "date-fns"
 import { UserContext } from "../Usercontext";
+import {baseUrl} from '../url'
 
 export default function PostPage(){
     const {userInfo} = useContext(UserContext)
@@ -12,7 +13,7 @@ export default function PostPage(){
     useEffect(() =>{
    
      console.log(id)  
-     fetch(`https://blogbackend-z08y.onrender.com/post/${id}`).then(response =>{
+     fetch(`${baseUrl}/post/${id}`).then(response =>{
         response.json().then(postInfo =>{
          setPostInfo(postInfo)
         })
@@ -34,7 +35,7 @@ export default function PostPage(){
         )}
         <div className="image">
         
-        <img src={`https://blogbackend-z08y.onrender.com/${postInfo.cover}`}/>
+        <img src={`baseUrl/${postInfo.cover}`}/>
              </div>
        
         <p>{postInfo.summery}</p>
