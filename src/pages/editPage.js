@@ -15,7 +15,7 @@ const EditPage = () =>{
     const [redirect, setRedirect] = useState(false)
 
      useEffect(() => {
-      fetch(`https://blogbackend-z08y.onrender.com/post/${id}`).then(response => {
+      fetch(`https://blogbackend-z08y.onrender.com/api/post/${id}`).then(response => {
         response.json().then(postInfo => {
           setTitle(postInfo.title)
           setContent(postInfo.content)
