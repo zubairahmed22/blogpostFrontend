@@ -13,16 +13,17 @@ const [posts, setPosts] = useState([])
   },[])
   return (
     <>
-    {posts.length > 0 && posts?.map(post =>(
+    {!posts?(<div>loading...</div>):posts.length > 0 && posts?.map(post =>(
      
-      <Post
-      
-      {...post}
-      />
+     <Post
      
+     {...post}
+     />
+    
+    
      
-      
-  ))}
+ ))}
+    
     </>
   )
 }

@@ -34,7 +34,7 @@ export default function PostPage(){
         )}
         <div className="image">
         
-        <img src={`${postInfo.cover}`}/>
+        <img src={`https://blogbackend-z08y.onrender.com/${postInfo.cover}`}/>
              </div>
        
         <p>{postInfo.summery}</p>
