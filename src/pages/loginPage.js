@@ -11,7 +11,7 @@ export default function LoginPage(){
 
 async function  loginUser(ev){
 ev.preventDefault()
-const response = await fetch('https://blogbackend-z08y.onrender.com/login',{
+const response = await fetch('https://blogbackend-z08y.onrender.com/api/login',{
     method: 'POST',
     body: JSON.stringify({username, password}),
     headers: {'Content-Type': 'application/json'},

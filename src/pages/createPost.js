@@ -28,7 +28,7 @@ export default function CreatePost(){
         data.set('file',files[0])
        
        
-       const response = await fetch('https://blogbackend-z08y.onrender.com/post',{
+       const response = await fetch('https://blogbackend-z08y.onrender.com/api/post',{
            method: "POST" ,
            body: data,
            credentials: 'include'

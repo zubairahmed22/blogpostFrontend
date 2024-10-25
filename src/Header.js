@@ -20,7 +20,7 @@ export const Header = () => {
   const username = userInfo?.username
 
 function logout(){
-  fetch('https://blogbackend-z08y.onrender.com/logout',{
+  fetch('https://blogbackend-z08y.onrender.com/api/logout',{
     credentials: 'include',
     method: 'POST'
   })
