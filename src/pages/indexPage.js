@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Post from '../Post'
+import { baseUrl } from '../url'
 
 const IndexPage = () => {
 const [posts, setPosts] = useState([])
   useEffect(() => {
-    fetch('https://blogbackend-z08y.onrender.com/api/post').then(response => {
+    fetch('baseUrl/api/post').then(response => {
      response.json().then(posts =>{
        
        setPosts(posts)

@@ -8,7 +8,7 @@ const Post = ({title, _id,summery, cover, content, author,createdAt}) => {
     <div className="entries">
     <div className="image">
       <Link to={`/post/${_id}`}>
-    <img src={'https://blogbackend-z08y.onrender.com/'+cover}
+    <img src={'baseUrl/'+cover}
 
     alt="blog image"/>
         </Link>
