@@ -35,7 +35,7 @@ export default function PostPage(){
         )}
         <div className="image">
         
-        <img src={`baseUrl/${postInfo.cover}`}/>
+        <img src={`${baseUrl}/${postInfo.cover}`}/>
              </div>
        
         <p>{postInfo.summery}</p>
