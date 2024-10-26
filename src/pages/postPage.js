@@ -13,7 +13,7 @@ export default function PostPage(){
     useEffect(() =>{
    
      console.log(id)  
-     fetch(`${baseUrl}/post/${id}`).then(response =>{
+     fetch(`${baseUrl}/api/post/${id}`).then(response =>{
         response.json().then(postInfo =>{
          setPostInfo(postInfo)
         })
