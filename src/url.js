@@ -1,1 +1,1 @@
-export const baseUrl = `https://blogbackend-z08y.onrender.com`
+export const baseUrl = `https://blogbackend-rho.vercel.app/`
