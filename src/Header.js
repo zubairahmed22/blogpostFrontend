@@ -5,7 +5,7 @@ import {baseUrl} from "./url"
 export const Header = () => {
  const {setUserInfo, userInfo} = useContext(UserContext)
   useEffect(() => {
-  fetch('baseUrl/profile',{
+  fetch('api/profile',{
     credentials: 'include'
   }).then(response =>{
     response.json().then(userInfo =>{
