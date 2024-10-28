@@ -12,7 +12,7 @@ export default function LoginPage(){
 
 async function  loginUser(ev){
 ev.preventDefault()
-const response = await fetch(`api/login`,{
+const response = await fetch(`${baseUrl}/api/login`,{
     method: 'POST',
     body: JSON.stringify({username, password}),
     headers: {'Content-Type': 'application/json'},
