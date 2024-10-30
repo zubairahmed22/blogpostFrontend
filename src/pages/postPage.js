@@ -35,10 +35,11 @@ export default function PostPage(){
         )}
         <div className="image">
         
-        <img src={`${baseUrl}/${postInfo.cover}`}/>
+        <img src={postInfo.cover}/>
              </div>
        
-        <p>{postInfo.summery}</p>
+    
+        <div className="content" dangerouslySetInnerHTML={{__html:postInfo.content}} />
        </div> 
     )
 }
