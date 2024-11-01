@@ -31,11 +31,12 @@ export default function CreatePost(){
        
        const response = await fetch(`${baseUrl}/api/post`,{
            method: "POST" ,
+           body: data,
            credentials: 'include',
            headers: {
             'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
         },
-           body: data
+           
            
            
         })
