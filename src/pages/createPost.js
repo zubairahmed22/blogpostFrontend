@@ -35,9 +35,7 @@ export default function CreatePost(){
            method: "POST" ,
            
            credentials: 'include',
-           headers: {
-            'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
-        },
+          
            
         body: data,
            
