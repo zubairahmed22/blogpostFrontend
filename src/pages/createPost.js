@@ -4,6 +4,8 @@ import "react-quill/dist/quill.snow.css"
 import { Navigate } from 'react-router-dom'
 import Editor from '../Editor'
 import { baseUrl } from '../url'
+const token = localStorage.getItem('jwt');
+console.log(token)
 
 
 
@@ -31,13 +33,13 @@ export default function CreatePost(){
        
        const response = await fetch(`${baseUrl}/api/post`,{
            method: "POST" ,
-           body: data,
+           
            credentials: 'include',
            headers: {
             'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
         },
            
-           
+        body: data,
            
         })
         if(response.ok)
